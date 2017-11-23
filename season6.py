@@ -1,12 +1,12 @@
 """""""""""""""""""""""""""""""""""""""""""""
-* Math behind MTV's Are You the One?		*
-* Season 6									*
-*											*
-* Author: Sophie Menashi					*	
-*		  smenashi@hamilton.edu				*
-*											*
-* Date created: 9/13/17						*
-* Date uploaded: 11/22/17					*
+* Math behind MTV's Are You the One?	    *
+* Season 6				    *
+*					    *
+* Author: Sophie Menashi		    *	
+*	  smenashi@hamilton.edu	            *
+*					    *
+* Date created: 9/13/17			    *
+* Date uploaded: 11/22/17		    *
 """""""""""""""""""""""""""""""""""""""""""""
 
 # Using itertools to generate permutations of possibly scenarios 
