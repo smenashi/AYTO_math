@@ -9,7 +9,7 @@
 * Date updated: 8/27/18			  		    *
 """""""""""""""""""""""""""""""""""""""""""""
 
-# Using itertools to generate permutations of possibly scenarios 
+# Using itertools to generate permutations of possible scenarios 
 import itertools
 
 GIRLS = ["Asia", "Bria", "Cali", "Jasmine", "Kayla", "Kenya", "Lauren", "Maria", "Morgan", "Nutsa", "Samantha"] 
@@ -73,7 +73,15 @@ def perm_check(perm):
 						   ("Kayla", "Cam"), ("Kenya", "Tevin"), ("Lauren", "Andrew"), ("Maria", "Shamoy"), 
 						   ("Morgan", "Tomas"), ("Nutsa", "Daniel"), ("Samantha", "Lewis")], 3, perm):
 		return False
+	
+	# Week 2
+	if not noMatch(0, 0, perm):
+		return False
 
+	elif not beam_elim([("Asia", "Brett"), ("Bria", "Moe"), ("Cali", "Tomas"), ("Jasmine", "Lewis"), 
+						   ("Kayla", "Cam"), ("Kenya", "Tevin"), ("Lauren", "Kwasi"), ("Maria", "Shamoy"), 
+						   ("Morgan", "Andrew"), ("Nutsa", "Daniel"), ("Samantha", "Zak")], 3, perm):
+		return False
 
 	else:
 		return True
@@ -131,7 +139,7 @@ def calculate_odds(girl_index, girl, guy, scenarios, total):
 	elif odds >= 35.0 and odds < 75.0:
 		odds_string = color.PURPLE + str(odds) + "%" + color.END
 	elif odds >= 75.0 and odds < 100.0:
-		odds_string = color.DARKCYAN + str(odds) + "%" + color.END
+		odds_string = color.YELLOW + str(odds) + "%" + color.END
 	elif odds == 100.0:
 		odds_string = color.GREEN + str(odds) + "%" + color.END
 	else:
@@ -158,7 +166,7 @@ def print_scenarios(scenarios, color):
 def generate_odds():
 	# Generates and prints total number of scenarios and odds of each possible pairing
 	
-	print("~Week One~")
+	print("~Week Two~")
 	
 	scenarios = generate_scenarios()
 	total = len(scenarios)
