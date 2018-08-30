@@ -6,7 +6,7 @@
 *	  	  smenashi@hamilton.edu 	        *
 *					                        *
 * Date created: 8/27/18					    *
-* Date updated: 8/27/18			  		    *
+* Date updated: 8/30/18			  		    *
 """""""""""""""""""""""""""""""""""""""""""""
 
 # Using itertools to generate permutations of possible scenarios 
@@ -81,6 +81,15 @@ def perm_check(perm):
 	elif not beam_elim([("Asia", "Brett"), ("Bria", "Moe"), ("Cali", "Tomas"), ("Jasmine", "Lewis"), 
 						   ("Kayla", "Cam"), ("Kenya", "Tevin"), ("Lauren", "Kwasi"), ("Maria", "Shamoy"), 
 						   ("Morgan", "Andrew"), ("Nutsa", "Daniel"), ("Samantha", "Zak")], 3, perm):
+		return False
+
+	# Week 3 (Perfect Match!!)
+	if not perfectMatch(7, 7, perm):
+		return False
+
+	elif not beam_elim([("Asia", "Lewis"), ("Bria", "Tomas"), ("Cali", "Brett"), ("Jasmine", "Kwasi"), 
+						   ("Kayla", "Cam"), ("Kenya", "Tevin"), ("Lauren", "Andrew"), ("Maria", "Shamoy"), 
+						   ("Morgan", "Zak"), ("Nutsa", "Moe"), ("Samantha", "Daniel")], 3, perm):
 		return False
 
 	else:
@@ -166,7 +175,7 @@ def print_scenarios(scenarios, color):
 def generate_odds():
 	# Generates and prints total number of scenarios and odds of each possible pairing
 	
-	print("~Week Two~")
+	print("~Week Three~")
 	
 	scenarios = generate_scenarios()
 	total = len(scenarios)
