@@ -92,6 +92,24 @@ def perm_check(perm):
 						   ("Morgan", "Zak"), ("Nutsa", "Moe"), ("Samantha", "Daniel")], 3, perm):
 		return False
 
+	# Week 4 
+	if not noMatch(5, 1, perm):
+		return False
+
+	elif not beam_elim([("Asia", "Cam"), ("Bria", "Kwasi"), ("Cali", "Tomas"), ("Jasmine", "Tevin"), 
+						   ("Kayla", "Brett"), ("Kenya", "Lewis"), ("Lauren", "Daniel"), ("Maria", "Shamoy"), 
+						   ("Morgan", "Zak"), ("Nutsa", "Andrew"), ("Samantha", "Moe")], 2, perm):
+		return False
+
+	# Week 5 
+	if not noMatch(1, 10, perm):
+		return False
+
+	elif not beam_elim([("Asia", "Moe"), ("Bria", "Daniel"), ("Cali", "Tomas"), ("Jasmine", "Kwasi"), 
+						   ("Kayla", "Cam"), ("Kenya", "Tevin"), ("Lauren", "Lewis"), ("Maria", "Shamoy"), 
+						   ("Morgan", "Zak"), ("Nutsa", "Brett"), ("Samantha", "Andrew")], 4, perm):
+		return False
+
 	else:
 		return True
 
@@ -175,7 +193,7 @@ def print_scenarios(scenarios, color):
 def generate_odds():
 	# Generates and prints total number of scenarios and odds of each possible pairing
 	
-	print("~Week Three~")
+	print("~Week Five~")
 	
 	scenarios = generate_scenarios()
 	total = len(scenarios)
